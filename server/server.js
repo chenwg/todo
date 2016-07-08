@@ -19,9 +19,6 @@ if(prod){
   require('./webpack')(app)
 }
 
-// api endpoint
-app.use('/api', require('./api')())
-
 // simple rewrite for production
 if(prod){
   app.get('*', (req, res) => {

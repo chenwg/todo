@@ -1,0 +1,19 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node ./server.js"
+  },
+  "dependencies": {
+    "lodash": "^4.13.1",
+    "body-parser": "^1.15.1",
+    "express": "^4.13.3",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "serve-favicon": "^2.0.1"
+  },
+  "author": "",
+  "license": "ISC"
+}

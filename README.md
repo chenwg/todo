@@ -5,7 +5,7 @@ Just another stupid TODO application
 ## Dependencies
 
 - `jest` test framework
-- `webpack` and `webpack-dev-server` a powerful dev/build tool
+- `webpack` a powerful dev/build tool
 - `babel` ES6 code trans-compiler
 - `react` UI framework
 - `redux` State management
@@ -21,10 +21,10 @@ Just another stupid TODO application
 
 ## TODO
 
-- [ ] 实现`npm test`命令
-- [ ] 实现`npm run build`命令
-- [ ] 实现`npm start`命令
-- [ ] 部署到leancloud云引擎
+- [x] 实现`npm test`命令
+- [x] 实现`npm run build`命令
+- [x] 实现`npm start`命令
+- [x] 部署到leancloud云引擎
 - [ ] 可以创建一条TODO
 - [ ] 可以标记未完成的TODO状态为已完成(completed)
 - [ ] 可以标记已完成的TODO状态为未完成

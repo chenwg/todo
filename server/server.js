@@ -26,6 +26,8 @@ if(prod){
   })
 }
 
+app.use('/api', require('./api')())
+
 const port = parseInt(process.env.LEANCLOUD_APP_PORT || process.env.APP_PORT, 10) || 3000
 app.listen(port, function(error) {
   if (error) {

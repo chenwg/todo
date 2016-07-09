@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@kadira/storybook": "^1.27.0",
+    "axios": "^0.12.0",
     "babel-cli": "^6.10.1",
     "babel-jest": "^13.0.0",
     "babel-loader": "^6.2.4",
@@ -38,7 +39,6 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.22.0",
-    "isomorphic-fetch": "^2.2.1",
     "jest-cli": "^13.0.0",
     "normalize.css": "^4.1.1",
     "normalizr": "^2.1.0",

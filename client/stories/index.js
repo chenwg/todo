@@ -1,13 +1,22 @@
-/*
 import React from 'react'
 import { storiesOf, action } from '@kadira/storybook'
 
-import MyComponent from 'components'
+import TodoList from 'containers/TodoList/TodoList'
 
-storiesOf('Login', module)
-  .add('your story', ()=>{
+const actions = {
+  find: action('find'),
+  create: action('create'),
+  update: action('update'),
+  destroy: action('destroy')
+}
+
+const todos = [
+  {id: '1', title: 'Todo 1', status: 'active'}
+]
+
+storiesOf('TodoList', module)
+  .add('default view', ()=>{
     return (
-      <MyComponent onAction={action('mock action')}/>
+      <TodoList todos={todos} actions={actions}/>
     )
   })
-*/

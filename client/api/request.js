@@ -1,35 +1,29 @@
-import 'isomorphic-fetch'
+import axios from 'axios'
 
 export default function(baseUrl){
-  const doRequest = (verb, url, data) => {
-    let absUrl = `${baseUrl}/`.replace(/\/+$/g, '/') + `/${url}`.replace(/^\/+/g, '')
+  const buildUrl = (url) => {
+    return `${baseUrl}/`.replace(/\/+$/g, '/') + `/${url}`.replace(/^\/+/g, '')
+  }
 
-    if(verb === 'GET'){
-      return fetch(absUrl)
-    }
-
-    const options = {method: verb.toUpperCase()}
-    if(data){
-      options.body = JSON.stringify(data)
-    }
-    return fetch(absUrl, options)
+  const onSuccess = (response) => {
+    return response.data
   }
 
   return {
     get(url){
-      return doRequest('GET', url)
+      return axios.get(buildUrl(url)).then(onSuccess)
     },
 
     post(url, data){
-      return doRequest('POST', url, data)
+      return axios.post(buildUrl(url), data).then(onSuccess)
     },
 
     put(url, data){
-      return doRequest('PUT', url, data)
+      return axios.put(buildUrl(url), data).then(onSuccess)
     },
 
     delete(url, data){
-      return doRequest('DELETE', url, data)
+      return axios.delete(buildUrl(url), data).then(onSuccess)
     }
   }
 }

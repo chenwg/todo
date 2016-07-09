@@ -25,7 +25,7 @@ Just another stupid TODO application
 - [x] 实现`npm run build`命令
 - [x] 实现`npm start`命令
 - [x] 部署到leancloud云引擎
-- [ ] 可以创建一条TODO
+- [x] 可以创建一条TODO
 - [ ] 可以标记未完成的TODO状态为已完成(completed)
 - [ ] 可以标记已完成的TODO状态为未完成
 - [ ] 可以筛选已完成/未完成/全部 TODOs

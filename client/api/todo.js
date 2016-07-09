@@ -1,17 +1,21 @@
+import Request from './request'
+
+const request = Request(process.env.APIENDPOINT)
+
 export default {
   find(){
-
+    return request.get('/todos')
   },
 
-  create(){
-
+  create(title){
+    return request.post('/todos', {title})
   },
 
-  update(){
-
+  update(id, status){
+    return request.put(`/todos/${id}`, {status})
   },
 
-  destroy(){
-    
+  destroy(id){
+    return request.delete(`/todos/${id}`)
   }
 }
